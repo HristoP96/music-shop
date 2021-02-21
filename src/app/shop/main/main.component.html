@@ -1,0 +1,20 @@
+<div class="content-wrap" [ngClass]="{'loaded': !isLoading, 'loading': isLoading}" igxLayout>
+    <igx-nav-drawer id="navigation" #drawer [isOpen]="true" [pinThreshold]="0" [pin]=true>
+        <ng-template igxDrawer>
+          <nav>
+            <span igxDrawerItem [isHeader]="true">Brands</span>
+    
+            <span *ngFor="let item of navItems" igxDrawerItem [active]="item.name === selected.name" igxRipple (click)="navigate(item)">
+              <span>{{ item.name }}</span>
+            </span>
+          </nav>
+    </ng-template>
+    </igx-nav-drawer>
+
+    <main class="products" igxFlex>
+      <span igxButton="icon" igxToggleAction="navigation">
+        <igx-icon fontSet="material">menu</igx-icon>
+      </span>
+      <h5>{{selected?.name}} content.</h5>
+    </main>
+</div>
