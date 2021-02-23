@@ -6,6 +6,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { UserService } from './services/user.service';
 import { NavComponent } from './nav/nav.component';
+import { ClusterService } from './services/cluster.service';
+import { IgxCategoryChartModule, IgxItemLegendModule } from "igniteui-angular-charts";
+import { IgxLegendModule } from "igniteui-angular-charts";
+import { IgxPieChartModule } from "igniteui-angular-charts";
+import { SquashPipe } from './statistics/squash.pipe';
 
 export const ROUTES: Routes = [{
   path: '',
@@ -14,7 +19,7 @@ export const ROUTES: Routes = [{
 }];
 
 @NgModule({
-  declarations: [StatisticsComponent, NavComponent],
+  declarations: [StatisticsComponent, NavComponent, SquashPipe],
   imports: [
     CommonModule,
     IgxGridModule,
@@ -24,9 +29,13 @@ export const ROUTES: Routes = [{
     IgxButtonGroupModule,
     IgxIconModule,
     IgxNavbarModule,
+    IgxPieChartModule,
+    IgxItemLegendModule,
+    IgxLegendModule,
+    IgxCategoryChartModule,
     IgxDividerModule,
     RouterModule.forChild(ROUTES)
   ],
-  providers: [{provide: 'endPoint', useValue: 'http://localhost:8000' }, UserService]
+  providers: [{provide: 'endPoint', useValue: 'http://localhost:8000' }, UserService, ClusterService]
 })
 export class DashboardModule { }

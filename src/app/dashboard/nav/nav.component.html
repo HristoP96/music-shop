@@ -1,25 +1,9 @@
 <div class="sample-column">
     <igx-navbar [isActionButtonVisible]="false" title="Marketing Dashboard">
         <strong>
-            Get customer segments for the last: 
+            View RFM analysis for the past: 
         </strong>
-        <igx-buttongroup>
-            <button igxButton igxRipple [selected]="true">
-                1 Week
-            </button>
-
-            <button igxButton igxRipple>
-                1 Month
-            </button>
-    
-            <button igxButton igxRipple>
-                3 Months
-            </button>
-
-            <button igxButton igxRipple>
-                Year
-            </button>
-
+        <igx-buttongroup [values]="timePeriodValues" (onSelect)="selectTimePeriod($event)">
         </igx-buttongroup>
     </igx-navbar>
 </div>

@@ -11,9 +11,7 @@
 .categoryStyle{
     font-weight: 600;
 }
-.breathingcontent{
 
-}
 .tabContent {
     padding: 24px 8px;
     display: flex;
@@ -21,6 +19,12 @@
     margin: 10px;
 }
 
+.tabContent{
+    padding: .9rem;
+    display: flex;
+    justify-content: flex-start;
+
+}
 .avatarContainer {
     display: flex;
     align-items: center;
@@ -43,10 +47,6 @@ h6 {
     border: 1px solid rgba(0, 0, 0, .08);
 }
 
-.tabContent igx-grid {
-    box-shadow: none;
-    border: 1px solid rgba(0, 0, 0, .08);
-}
 
 .grid__wrapper {
     margin: 4px 16px;
@@ -57,7 +57,40 @@ h6 {
     align-items: center;
 }
 
+.tabContent igx-grid {
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, .08);
+}
+
 .statistics-conatiner {
     display: flex;
     flex-flow: column;
+}
+
+.content{
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: column;
+}
+
+
+.legend{
+    height: 20%;
+    min-width: 100px;
+}
+
+.cluster-container{
+    margin-left: 1.5rem;
+}
+
+.pie-chart {
+    height: 240px;
+    min-width: 70%;
+}
+
+.chart-container{
+    display: flex;
+    height: 50%;
+    min-width: 50%;
+    align-items: center;
 }

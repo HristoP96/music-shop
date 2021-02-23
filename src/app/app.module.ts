@@ -7,8 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { IgxAvatarModule, IgxDividerModule, IgxIconModule, IgxTabsModule } from 'igniteui-angular';
 import { HttpClientModule } from '@angular/common/http';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -24,8 +22,7 @@ import { environment } from '../environments/environment';
     IgxAvatarModule,
     IgxIconModule,
     IgxDividerModule,
-    HttpClientModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
